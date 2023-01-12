@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
-import { useContext } from 'react';
+import axios from 'axios';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../Auth';
 
 const mypage = () => {
@@ -23,7 +24,7 @@ const mypage = () => {
             <Button
                 target="_blank"
                 // 環境に応じて"sample"を書き換えてください
-                href="https://sample.herokuapp.com/api/auth/discord"
+                href="https://dimicom-server.herokuapp.com/api/auth/discord"
                 className="blackButton"
             >
                 SignIn(heroku)
@@ -40,7 +41,7 @@ const mypage = () => {
             <Button
                 variant='text'
                 // 環境に応じて"sample"を書き換えてください
-                href="https://sample.herokuapp.com/api/auth/signout"
+                href="https://dimicom-server.herokuapp.com/api/auth/signout"
                 className="blackButton"
             >
                 SignOut(heroku)
