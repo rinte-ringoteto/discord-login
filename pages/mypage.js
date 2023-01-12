@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Auth';
 
-const useMypage = () => {
+const mypage = () => {
     const { currentUser, loading } = useContext(AuthContext);
 
     return !loading && (
@@ -50,4 +50,4 @@ const useMypage = () => {
     );
 }
 
-export default useMypage;
+export default mypage;
