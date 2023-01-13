@@ -34,7 +34,7 @@ export default function Home() {
           <Button
             target="_blank"
             // 環境に応じて"sample"を書き換えてください
-            href="https://dimicom-server.herokuapp.com/api/auth/discord"
+            href="https://sample.herokuapp.com/api/auth/discord"
             className="blackButton"
           >
             SignIn(heroku)
@@ -51,7 +51,7 @@ export default function Home() {
           <Button
             variant='text'
             // 環境に応じて"sample"を書き換えてください
-            href="https://dimicom-server.herokuapp.com/api/auth/signout"
+            href="https://sample.herokuapp.com/api/auth/signout"
             className="blackButton"
           >
             SignOut(heroku)
