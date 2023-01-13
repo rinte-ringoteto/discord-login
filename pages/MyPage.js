@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import axios from 'axios';
+import Link from 'next/link';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Auth';
 
@@ -8,6 +9,7 @@ const MyPage = () => {
 
     return !loading && (
         <div>
+            <h2>MY PAGE</h2>
             {currentUser
                 ? < img src={`https://cdn.discordapp.com/avatars/${currentUser.discordId}/${currentUser.avatar}.png`} alt="" />
                 : null
@@ -46,6 +48,12 @@ const MyPage = () => {
             >
                 SignOut(heroku)
             </Button>
+            <div></div>
+            <Link
+                variant='text'
+                href="http://localhost:3000">
+                HOME
+            </Link>
         </div>
     );
 }

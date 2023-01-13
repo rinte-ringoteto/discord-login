@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import { Button } from '@mui/material'
+import { useContext, useState } from 'react';
+import { AuthContext } from '../Auth';
+import Link from 'next/link';
 
 export default function Home() {
+  const { currentUser, loading } = useContext(AuthContext);
+
   return (
     <>
       <Head>
@@ -12,6 +17,12 @@ export default function Home() {
       </Head>
       <div>
         <>
+          <h2>HOME</h2>
+          {currentUser
+            ? < img src={`https://cdn.discordapp.com/avatars/${currentUser.discordId}/${currentUser.avatar}.png`} alt="" />
+            : null
+          }
+          <div></div>
           <Button
             target="_blank"
             href="http://localhost:5000/api/auth/discord"
@@ -46,6 +57,11 @@ export default function Home() {
             SignOut(heroku)
           </Button>
           <div></div>
+          <Link
+            variant='text'
+            href="http://localhost:3000/MyPage">
+            MY PAGE
+          </Link>
         </>
       </div>
     </>
