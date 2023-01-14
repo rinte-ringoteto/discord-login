@@ -13,12 +13,12 @@ const AuthProvider = (props) => {
         const getUserDetails = () => {
             console.log("認証呼び出しタイミング")
             // デプロイ時に修正
-            // return axios.get("https://dimicom-server.herokuapp.com/api/auth/status", {
-            //     withCredentials: true
-            // });
-            return axios.get("http://localhost:5000/api/auth/status", {
+            return axios.get("https://dimicom-server.herokuapp.com/api/auth/status", {
                 withCredentials: true
             });
+            // return axios.get("http://localhost:5000/api/auth/status", {
+            //     withCredentials: true
+            // });
         }
         getUserDetails()
             .then(({ data }) => {
